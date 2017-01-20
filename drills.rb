@@ -1,50 +1,62 @@
 #########################
 #### USING ARGUMENTS ####
 #########################
-#say_hello
-  # returns 'hello'
+def say_hello
+   'hello'
+end
 
-#echo
-  # echoes (returns) the input string
-
-#get_fruit
+def echo (str)
+  return str
+end
+def get_fruit(id = 0)
   # returns the fruit that corresponds to the given id
-  # does not raise an error when the id argument is missing
+    ["apple", "pear"][id]
+
+end
   # defaults to 'apple' when no id argument is supplied
 
-#how_many_args
+def how_many_args (*args)
+  args.length
+end
   # accepts any number of arguments without error
   # returns the total number of arguments passed to the function
 
-#find_answer
+def find_answer (**answer)
   # returns the value associated with the 'answer' keyword argument
+  answer[:answer]
   # returns nil if it cannot find the 'answer' keyword argument
   # raises an error when given non-keyword arguments
-
+end
 ##############################
 #### MANIPULATING STRINGS ####
 ##############################
-#first_char
+def first_char (word)
   # returns the first letter of the given word
+  word[0].downcase
   # lowercases the first letter of the given word
-
-#polly_wanna
+end
+def polly_wanna (word)
+  word * 3
   # includes the given word in its return value
   # repeats the given word 3 times
-
-#count_chars
+end
+def count_chars (str)
+  str.length
   # returns the number of characters in the given string
-
-#yell
+end
+def yell (message)
   # convert the given message to uppercase
+  message.upcase + "!"
   # adds an exclamation point to the end of the given message
-
-#to_telegram
+end
+def to_telegram (string)
   # replaces periods in the input string with ' STOP'
-
-#spell_out
+  return string.gsub(/\./, " STOP")
+end
+# def spell_out (string)
   # returns the input string, with characters seperated by dashes
   # converts the input string to lowercase
+
 
 #seperate
   # seperates characters in the input string with a custom seperator, when supplied with one
